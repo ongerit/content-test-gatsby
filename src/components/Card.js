@@ -5,9 +5,6 @@ import Img from 'gatsby-image'
 import {createClient} from 'contentful-management'
 import '../sass/components/card.scss'
 
-console.log(process.env)
-console.log("CONFIG", window.contentfulConfig)
-
 const ACCESS_TOKEN = process.env.ACCESS_TOKEN
 const SPACE_ID = process.env.SPACE_ID
 
