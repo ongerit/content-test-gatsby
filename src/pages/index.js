@@ -15,7 +15,7 @@ const Index = ({data}) =>  {
   return (
     <Container>
       <PageTitle small>
-        <a href="//www.thomasongeri.com">Tom's Favorite Songs</a>
+        <a href="//www.thomasongeri.com">ADMIN PAGE</a>
       </PageTitle>
       <CardList>
         {posts.map(({ node: post })=> (
