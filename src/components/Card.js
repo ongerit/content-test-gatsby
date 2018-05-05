@@ -35,16 +35,21 @@ const Post = styled.li`
 const Card = (props) => {
   return (
     <Post>
-      <Link to={`/${props.slug}/`}>
-        <Img sizes={props.image.sizes} backgroundColor={'#eeeeee'} />
-        <div className="card__content">
-          <div className="card__title">{props.title}</div>
-          <div className="card__date">{props.date}</div>
-          <div className="card__excerpt" 
-              dangerouslySetInnerHTML={{ __html: props.excerpt.childMarkdownRemark.excerpt }}>
+      <div className="card">
+        <Link to={`/${props.slug}/`}>
+            <Img 
+            sizes={props.image.sizes} 
+            className="card__image"
+            />
+          <div className="card__content">
+            <div className="card__title">{props.title}</div>
+            <div className="card__date">{props.date}</div>
+            <div className="card__excerpt" 
+                dangerouslySetInnerHTML={{ __html: props.excerpt.childMarkdownRemark.excerpt }}>
+            </div>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </div>
     </Post>
   )
 }

@@ -1,12 +1,63 @@
 @import '../variables';
 .card {
+    position: relative;
+    background: $charcoal-2;
+    overflow: hidden;
+
+    &:hover {
+        .card__content {
+            display: block;
+        
+        }
+    }
+
+    &__image {
+        z-index: 10;
+        filter: grayscale(0);
+        &:after {
+            position: absolute;
+            content:"";
+            height:100%;
+            width:100%;
+            top:0;
+            left:0;
+            background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, $pink 100%);
+          }
+    }
+
+    	/* Hover Animation */
+	&__image,
+	&__content,
+	&::after {
+		transition: transform 0.3s, opacity 0.3s;
+	}
+
+	&:hover::after {
+		opacity: 0;
+		transform: translate3d(0,20px,0);
+	}
+
+	&:hover .card__image {
+        transform: translate3d(0,100px,0) scale3d(0.7,0.7,1);
+        filter: grayscale(1);
+
+        &:after {
+            background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+          }
+    }
+    
+    &:hover .card__content {
+		transform: translate3d(0,-50px,0);
+	}
 
     &__content {
-        //display: none;
-       
-        &:hover {
-            // display: block;
-        }
+        background: $body-background-2; 
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px 20px;
     }
 
     &__title {
