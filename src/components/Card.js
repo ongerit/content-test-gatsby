@@ -2,38 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
-import {createClient} from 'contentful-management'
+import {publishContent, unPublishContent} from '../api/contentful'
 import '../sass/components/card.scss'
-
-const ACCESS_TOKEN = process.env.accessToken
-const SPACE_ID = process.env.spaceId
-
-const client = createClient({
-  accessToken: ACCESS_TOKEN
-})
-
-const publishContent = (e, asset_id) => {
-  e.preventDefault()
-  const publishPost = (asset_id)=> {
-    client.getSpace(SPACE_ID)
-    .then((space) => space.getAsset(asset_id))
-    .then((asset) => asset.publish())
-    .then((asset) => console.log(`Asset ${asset.sys.id} published.`))
-    .catch(console.error)
-  }
-}
-
-const unPublishContent = (e, asset_id) => {
-  e.preventDefault()
-
-  client.getSpace(SPACE_ID)
-  .then((space) => space.getAsset(asset_id))
-  .then((asset) => asset.unpublish())
-  .then((asset) => console.log(`Asset ${asset.sys.id} unpublished.`))
-  .catch(console.error)
-}
-
-
 
 const Post = styled.li`
   margin: 0 0 1em 0;
