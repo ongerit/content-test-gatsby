@@ -5,23 +5,23 @@ import Img from 'gatsby-image'
 import {createClient} from 'contentful-management'
 import '../sass/components/card.scss'
 
-const ACCESS_TOKEN = process.env.ACCESS_TOKEN
-const SPACE_ID = process.env.SPACE_ID
+// const ACCESS_TOKEN = process.env.accessToken
+// const SPACE_ID = process.env.spaceId
 
-const client = createClient({
-  accessToken: ACCESS_TOKEN
-})
+// const client = createClient({
+//   accessToken: ACCESS_TOKEN
+// })
 
-const publishContent = (e, asset_id) => {
-  e.preventDefault()
-  const publishPost = (asset_id)=> {
-    client.getSpace(SPACE_ID)
-    .then((space) => space.getAsset(asset_id))
-    .then((asset) => asset.publish())
-    .then((asset) => console.log(`Asset ${asset.sys.id} published.`))
-    .catch(console.error)
-  }
-}
+// const publishContent = (e, asset_id) => {
+//   e.preventDefault()
+//   const publishPost = (asset_id)=> {
+//     client.getSpace(SPACE_ID)
+//     .then((space) => space.getAsset(asset_id))
+//     .then((asset) => asset.publish())
+//     .then((asset) => console.log(`Asset ${asset.sys.id} published.`))
+//     .catch(console.error)
+//   }
+// }
 
 const unPublishContent = (e, asset_id) => {
   e.preventDefault()
