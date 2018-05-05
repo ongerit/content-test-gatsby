@@ -1,6 +1,3 @@
 [build]
     command = "gatsby build"
     publish = "public/"
-[context.admin] # 'admin' is a branch name
-    command = "echo 'admin'"
-    base = "admin"
