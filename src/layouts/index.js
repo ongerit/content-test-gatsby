@@ -44,7 +44,7 @@ const Template = ({ data, children }) => {
 
 export const query = graphql`
   query menuQuery {
-    allContentfulTag {
+    allContentfulTag(filter:{node_locale:{eq: "en-US"}}) {
       edges {
         node {
           id

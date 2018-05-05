@@ -50,11 +50,7 @@ const Menu = (props) => {
         <Nav>
           <ul>
             <li><Link to="/" activeStyle={activeLinkStyle}>All Songs</Link></li>
-
             {props.slugs.map(slug => <li><Link to={`/tag/${slug.node.slug}`} activeStyle={activeLinkStyle}>{slug.node.title}</Link></li>)}
-
-            
-            <li><Link to="/contact/" activeStyle={activeLinkStyle}>Contact</Link></li>
           </ul>
         </Nav>
       </Header>

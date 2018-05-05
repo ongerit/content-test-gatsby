@@ -1,5 +1,12 @@
+@import '../../sass/variables';
+
 .hero {
+    h1,
+    h2 {
+        text-align: center;
+        color: $text-color;
+    }
     h1 {
-        text-align: center
+        color: $white;
     }
 }

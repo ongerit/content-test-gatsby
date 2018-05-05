@@ -52,7 +52,7 @@ const Hero = (props) => (
   <Wrapper>
     <div className="hero">
     <BgImg height={props.height} sizes={props.image.sizes}  />
-    <h1>{props.artist}</h1>
+    <h2>{props.artist}</h2>
     <Title>{props.title}</Title>
     </div>
   </Wrapper>
