@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
+import '../sass/pages/404.scss'
 
 const Box = styled.div`
   margin: 0 auto;

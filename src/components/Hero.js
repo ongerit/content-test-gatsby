@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.section`
   position: relative;
-  min-height: 300px;
+  min-height: 100px;
 `
 const BgImg = styled(Img)`
   position: absolute;
@@ -12,8 +12,6 @@ const BgImg = styled(Img)`
   left: 0;
   width: 100%;
   z-index: -1;
-  min-height: 300px;
-  height: auto;
   @media (min-width: ${props => props.theme.responsive.small}) {
     height: ${props => props.height || 'auto'};
   }
@@ -29,14 +27,13 @@ const BgImg = styled(Img)`
     left: 0;
     right: 0;
     bottom: 0;
-    height: 100%;
     width: 100%;
     z-index: 1;
   }
 `
 
 const Title = styled.h1`
-  font-size: 3em;
+  font-size: 2em;
   text-transform: capitalize;
   font-weight: 600;
   position: absolute;

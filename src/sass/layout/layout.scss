@@ -1,0 +1,14 @@
+@import '../variables';
+
+.layout {
+ background: $body-background;
+ font-family: $fontFamily;
+ 
+ a {
+    color: $links;
+    text-decoration: none;
+ }
+ p,h1 {
+     color: $gray;
+ }
+}

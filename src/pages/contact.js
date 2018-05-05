@@ -7,6 +7,7 @@ import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
 import PageBody from '../components/PageBody'
 import ContactForm from '../components/ContactForm'
+import '../sass/pages/contact.scss'
 
 const Contact = ({data}) => {
 

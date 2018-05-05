@@ -22,6 +22,7 @@ module.exports = {
     },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
     {
     resolve: `gatsby-transformer-remark`,
       options: {

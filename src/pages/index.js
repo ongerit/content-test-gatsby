@@ -6,7 +6,7 @@ import CardList from '../components/CardList'
 import Card from '../components/Card'
 import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
-
+import '../sass/pages/index.scss'
 const Index = ({data}) =>  {
 
   const posts = data.allContentfulPost.edges;

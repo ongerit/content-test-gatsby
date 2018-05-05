@@ -9,6 +9,7 @@ import PageBody from '../components/PageBody'
 import TagList from '../components/TagList'
 import PostLinks from '../components/PostLinks'
 import PostDate from '../components/PostDate'
+import '../sass/template/post.scss'
 
 const PostTemplate = ({data}) => {
 
@@ -41,7 +42,7 @@ const PostTemplate = ({data}) => {
       <Hero
         title={title}
         image={heroImage}
-        height={'50vh'}
+        height={'5vh'}
       />
 
       <Container>

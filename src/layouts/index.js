@@ -7,11 +7,13 @@ import theme from '../styles/theme'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 import favicon from '../images/favicon.ico'
+import '../sass/layout/layout.scss'
+
 
 const Template = ({ children }) => {
 
     return (
-      <div>
+      <div className="layout">
 
         <Helmet>
           <title>{config.siteTitle}</title>
