@@ -1,12 +1,12 @@
 @import '../variables';
 body {
- background: $body-background;
+ background: $body-background !important;
 }
 .layout {
  font-family: $fontFamily;
  
  a {
-    color: $links;
+    color: $links !important;
     text-decoration: none;
  }
  p,h1 {
