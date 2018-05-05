@@ -43,7 +43,7 @@ const Card = (props) => {
             />
           <div className="card__content">
             <div className="card__title">{props.title}</div>
-            <div className="card__date">{props.date}</div>
+            <div className="card__name">{props.artistName}</div>
             <div className="card__excerpt" 
                 dangerouslySetInnerHTML={{ __html: props.excerpt.childMarkdownRemark.excerpt }}>
             </div>

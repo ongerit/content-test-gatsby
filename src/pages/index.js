@@ -14,7 +14,7 @@ const Index = ({data}) =>  {
   return (
     <Container>
       <PageTitle small>
-        <a href="www.thomasongeri.com">Tom's Favorite Songs</a>
+        <a href="//www.thomasongeri.com">Tom's Favorite Songs</a>
       </PageTitle>
       <CardList>
         {posts.map(({ node: post })=> (
@@ -23,6 +23,7 @@ const Index = ({data}) =>  {
            slug={post.slug}
            image={post.heroImage}
            title={post.title}
+           artist={post.aritistName}
            date={post.publishDate}
            excerpt={post.body}
           />
@@ -34,10 +35,18 @@ const Index = ({data}) =>  {
 
 export const query = graphql`
   query indexQuery {
-    allContentfulPost(limit: 1000, sort: {fields: [publishDate], order: DESC}) {
+    allContentfulPost(
+      limit: 1000, 
+      sort: {
+        fields: [publishDate], 
+        order: DESC
+      },
+      filter: {node_locale: {eq: "en-US"}}
+    ) {
       edges {
         node {
           title
+          artistName
           id
           slug
           publishDate(formatString: "MMMM DD, YYYY")
