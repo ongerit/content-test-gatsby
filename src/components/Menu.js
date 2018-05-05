@@ -44,13 +44,16 @@ const activeLinkStyle = {
   color: 'white'
 };
 
-const Menu = () => {
+const Menu = (props) => {
     return (
       <Header>
         <Nav>
           <ul>
-            <li><Link to="/" exact activeStyle={activeLinkStyle}>Home</Link></li>
-            <li><Link to="/about/" activeStyle={activeLinkStyle}>About</Link></li>
+            <li><Link to="/" activeStyle={activeLinkStyle}>All Songs</Link></li>
+
+            {props.slugs.map(slug => <li><Link to={`/tag/${slug.node.slug}`} activeStyle={activeLinkStyle}>{slug.node.title}</Link></li>)}
+
+            
             <li><Link to="/contact/" activeStyle={activeLinkStyle}>Contact</Link></li>
           </ul>
         </Nav>

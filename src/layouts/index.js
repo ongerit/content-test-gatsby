@@ -10,7 +10,9 @@ import favicon from '../images/favicon.ico'
 import '../sass/layout/layout.scss'
 
 
-const Template = ({ children }) => {
+const Template = ({ data, children }) => {
+
+  const slugs = data.allContentfulTag.edges
 
     return (
       <div className="layout">
@@ -30,7 +32,7 @@ const Template = ({ children }) => {
 
         <ThemeProvider theme={theme}>
           <div>
-            <Menu/>
+            <Menu slugs={slugs}/>
             {children()}
             <Footer/>
           </div>
@@ -39,5 +41,19 @@ const Template = ({ children }) => {
       </div>
     )
 }
+
+export const query = graphql`
+  query menuQuery {
+    allContentfulTag {
+      edges {
+        node {
+          id
+          title
+          slug
+        }
+      }
+    }
+  }
+`
 
 export default Template

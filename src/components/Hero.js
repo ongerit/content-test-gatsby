@@ -1,6 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import '../sass/components/hero.scss'
 
 const Wrapper = styled.section`
   position: relative;
@@ -49,8 +50,11 @@ const Title = styled.h1`
 
 const Hero = (props) => (
   <Wrapper>
-    <BgImg height={props.height} sizes={props.image.sizes} backgroundColor={'#eeeeee'} />
+    <div className="hero">
+    <BgImg height={props.height} sizes={props.image.sizes}  />
+    <h1>{props.artist}</h1>
     <Title>{props.title}</Title>
+    </div>
   </Wrapper>
 )
 

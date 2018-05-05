@@ -7,12 +7,12 @@
     &:hover {
         .card__content {
             display: block;
-        
         }
     }
 
     &__image {
         z-index: 10;
+        padding-bottom: 94% !important;
         filter: grayscale(0);
         &:after {
             position: absolute;

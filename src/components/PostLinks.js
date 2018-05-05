@@ -34,8 +34,8 @@ const NextLink = styled(Link)`
 const PostLinks = (props) => {
   return (
     <Wrapper>
-      {props.previous && (<PreviousLink to={`/${props.previous.slug}/`}>Prev Post</PreviousLink>)}
-      {props.next && (<NextLink to={`/${props.next.slug}/`}>Next Post</NextLink>)}
+      {props.previous && (<PreviousLink to={`/${props.previous.slug}/`}>Prev Song</PreviousLink>)}
+      {props.next && (<NextLink to={`/${props.next.slug}/`}>Next Song</NextLink>)}
     </Wrapper>
   )
 }

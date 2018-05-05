@@ -8,19 +8,18 @@ import Container from '../components/Container'
 import PageBody from '../components/PageBody'
 import TagList from '../components/TagList'
 import PostLinks from '../components/PostLinks'
-import PostDate from '../components/PostDate'
 import '../sass/template/post.scss'
 
 const PostTemplate = ({data}) => {
 
   const {
     title,
+    artistName,
     slug,
     id,
     heroImage,
     description,
     body,
-    publishDate,
     tags,
   } = data.contentfulPost;
 
@@ -42,12 +41,11 @@ const PostTemplate = ({data}) => {
       <Hero
         title={title}
         image={heroImage}
-        height={'5vh'}
+        height={'37vh'}
+        artist={artistName}
       />
-
       <Container>
         {tags && (<TagList tags={tags} />)}
-        <PostDate date={publishDate}/>
         <PageBody body={body} />
         <PostLinks previous={postIndex.previous} next={postIndex.next} />
       </Container>
@@ -60,6 +58,7 @@ export const query = graphql`
   query postQuery($slug: String!) {
     contentfulPost(slug: {eq: $slug}) {
       title
+      artistName
       id
       slug
       publishDate(formatString: "MMMM DD, YYYY")

@@ -7,6 +7,7 @@ import Card from '../components/Card'
 import CardList from '../components/CardList'
 import PageTitle from '../components/PageTitle'
 import Container from '../components/Container'
+import '../sass/template/tag.scss'
 
 const TagTemplate = ({data}) => {
 
@@ -22,15 +23,13 @@ const TagTemplate = ({data}) => {
     <div>
 
       <Helmet>
-        <title>{`Tag: ${title} - ${config.siteTitle}`}</title>
+        <title>{`Playlist: ${title} - ${config.siteTitle}`}</title>
         <meta property="og:title" content={`Tag: ${title} - ${config.siteTitle}`} />
         <meta property="og:url" content={`${config.siteUrl}/tag/${slug}/`} />
       </Helmet>
 
       <Container>
-
-        <PageTitle small>Tag: &ldquo;{title}&rdquo;</PageTitle>
-
+        <PageTitle small>Playlist: &ldquo;{title}&rdquo;</PageTitle>
         <CardList>
           {posts.map( post => (
             <Card
