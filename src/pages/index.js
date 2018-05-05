@@ -7,6 +7,7 @@ import Card from '../components/Card'
 import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
 import '../sass/pages/index.scss'
+
 const Index = ({data}) =>  {
 
   const posts = data.allContentfulPost.edges;
@@ -20,6 +21,7 @@ const Index = ({data}) =>  {
         {posts.map(({ node: post })=> (
           <Card
            key={post.id}
+           assetId={post.id}
            slug={post.slug}
            image={post.heroImage}
            title={post.title}

@@ -1,8 +1,10 @@
 @import '../variables';
 .card {
-    position: relative;
-    background: $charcoal-2;
-    overflow: hidden;
+    &__wrapper {
+        position: relative;
+        background: $charcoal-2;
+        overflow: hidden;
+    }
 
     &:hover {
         .card__content {
@@ -67,7 +69,30 @@
         text-transform: capitalize;
         margin: 1rem 1rem .5rem 0;
     }
-    &__excerpt {
 
+    &__control {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__publish,
+    &__draft {
+        color: $text-color;
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
+        padding: 30px 0;
+        cursor: pointer;
+        width: 100%;
+        text-align: center
+    }
+
+    &__draft:hover {
+        background: $pink;
+        color: $white;
+    }
+    &__publish:hover {
+        background: $charcoal-2;
+        color: $white;
     }
 }
