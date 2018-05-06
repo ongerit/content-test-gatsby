@@ -15,6 +15,14 @@ catch (e) {
 module.exports = {
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-11614378-9",
+        // Puts tracking script in the head instead of the body
+        head: false,
+      }
+    },
+    {
     resolve: 'gatsby-plugin-canonical-urls',
       options: {
         siteUrl: config.siteUrl,
@@ -23,6 +31,7 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-plugin-google-analytics',
     {
     resolve: `gatsby-transformer-remark`,
       options: {
