@@ -1,12 +1,12 @@
 // Import
 import {createClient} from 'contentful-management'
-// Access
-const ACCESS_TOKEN = 'enter key'
-const SPACE_ID = 'space id'
+// // Access
+// const ACCESS_TOKEN = 'enter key'
+// const SPACE_ID = 'space id'
 
-const client = createClient({
-  accessToken: ACCESS_TOKEN
-})
+// const client = createClient({
+//   accessToken: ACCESS_TOKEN
+// })
 
 // functions
 export function publishContent(e, asset_id) {
